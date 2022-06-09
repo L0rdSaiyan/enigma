@@ -1,0 +1,286 @@
+body {
+    width: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(#ff0000, #fff 60%, pink 80%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    max-height: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #message {
+    position: absolute;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+    color: rgb(41, 41, 41);
+    left: 26%;
+    top: 20%;
+    font-family: "Coming Soon", cursive;
+    font-size: 250%;
+    
+  }
+  
+  #message h1 {
+      text-shadow: 2px 2px #ff0000;
+  }
+  
+  #message p {
+      position: absolute;
+      right: 15%;
+      font-family: 'Great Vibes', cursive;
+      font-size: 150%;
+  }
+  
+  .heart-1 {
+    left: 5%;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart-2 {
+    left: 15%;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart-3 {
+    left: 25%;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart-4 {
+    left: 35%;
+    animation-duration: 2.9s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart-5 {
+    left: 45%;
+    animation-duration: 2.6s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart-6 {
+    left: 55%;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart-7 {
+    left: 65%;
+    animation-duration: 2.7s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart {
+    position: relative;
+    display: inline-block;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    animation-name: drop;
+    animation-timing-function: ease-in;
+  }
+  .heart::after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart::before {
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+  
+  @keyframes drop {
+    0% {
+      top: -55px;
+    }
+    100% {
+      top: 900px;
+      opacity: 0.2;
+    }
+  }
+  
+  @media only screen and (max-width: 1025px) {
+    body {
+      max-width: 60%;
+    }
+  
+    #message {
+      left: 5%;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #message {
+      padding: 0;
+      font-size: 150%;
+    }
+    #message p {
+      right: 5%;
+  }
+    .heart {
+      height: 25px;
+      width: 25px;
+    }
+    .heart::after {
+      width: 25px;
+      height: 25px;
+      left: 12.5px;
+    }
+    .heart::before {
+      width: 25px;
+      height: 25px;
+      top: -12.5px;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+ background-color: #FFE53B;
+  background-image: radial-gradient(#C90036,#67001B);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  min-height: 100vh;
+}
+
+.heart{
+    position: fixed;
+}
+.text{
+  position:fixed;
+  bottom: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  color:#eeeeee;
+   text-shadow: 0 0 5px #fff5, 0 0 10px #fff5, 0 0 15px #e6007355, 0 0 20px #e6007355, 0 0 25px #e6007355, 0 0 30px #e6007355, 0 0 35px #e6007355;
+  text-align:center;
+  
+}
+
+.text2{
+
+    position:fixed;
+    font-family: 'Dancing Script', cursive;
+    top: 50px;
+    font-size: 34px;
+    color:#eeeeee;
+     text-shadow: 0 0 5px #fff5, 0 0 10px #fff5, 0 0 15px #e6007355, 0 0 20px #e6007355, 0 0 25px #e6007355, 0 0 30px #e6007355, 0 0 35px #e6007355;
+    align-items: baseline;
+    justify-content: baseline;
+
+}
+
+
+.heartt {
+  position: relative;
+  height: 180px;
+  width: 100px;
+  margin-top: 10px;
+  animation:beat 1.2s ease infinite 0s ;
+filter:saturate(300%);
+cursor: pointer;
+
+}
+@keyframes beat {
+  0%{
+      transform:scale(1);
+    opacity:1;
+      filter: drop-shadow(0 0 2px #f9434f);
+    z-index:1;
+  }
+  15%{
+      transform:scale(1.2);
+     opacity:1.1;
+    filter: drop-shadow(0 0 6px #f9434f);
+    z-index:2;
+  }
+  25%{
+      transform:scale(1.1);
+     opacity:1;
+      filter: drop-shadow(0 0 2px #f9434f);
+    z-index:1;
+  }
+  35%{
+      transform:scale(1.2);
+     opacity:1.1;
+     filter: drop-shadow(0 0 6px #f9434f);
+    z-index:2;
+  }
+  100%{
+      transform:scale(1);
+       opacity:1;
+    filter: drop-shadow(0 0 2px #f9434f);
+    z-index:1;
+  }
+
+
+  
+}
+
+.heartt::before,
+.heartt::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 170px;
+  width: 100px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0px 0px 2px 4px red;
+  z-index:3px;
+
+}
+
+.heartt::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+
+}
+
+.heartt:after {
+  right: 50px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+
+
+
+
